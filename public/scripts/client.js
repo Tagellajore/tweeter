@@ -13,7 +13,7 @@ $(document).ready(() => {
   // attach a function to run on submit
   $form.on('submit', (event) => {
   event.preventDefault();
-  
+  $(".error").addClass("hideerror");
   console.log(event);
   
   // $(".error").html("")
@@ -22,18 +22,22 @@ $(document).ready(() => {
   console.log(val);
   
   if(val.length === 0)  {
-    $("#errormessage").html("You need to type something first")
+    $(".error").removeClass("hideerror");
+    $("#errormessage").html("You need to type something first");
+    console.log("val.length === 0");
+    return
     // return alert('You need to type something first')
   } else if (val === null) {
-    $("#errormessage").html("text area can not be null")
+    $(".error").removeClass("hideerror");
+    $("#errormessage").html("text area can not be null");
+    return
     // return alert('text area can not be null')
   } else if (val.length > 140) {
-    $("#errormessage").html("Characters length needs to be less than 140")
+    $(".error").removeClass("hideerror");
+    $("#errormessage").html("Characters length needs to be less than 140");
+    return
     // return alert('Characters length needs to be less than 140');
   }
-    // } else {
-  //   $(".hideerror").removeClass()
-  // }
 
   
   console.log('form has been submitted')
