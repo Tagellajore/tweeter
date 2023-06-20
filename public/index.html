@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -44,7 +45,7 @@
       </div>
       <br>
       <div>
-          <h2><b>Shishay</b> Lulawit</h2>
+          <h2><b>Takik</b> Kiya</h2>
       </div>
   </header>
     
@@ -52,7 +53,12 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
+        <section class="error hideerror">
+          <i class="fa-solid fa-triangle-exclamation"></i> &nbsp
+          <span id="errormessage"></span> &nbsp
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </section>
+        <form id="new-tweet-item" action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
@@ -61,29 +67,7 @@
           </div>
         </form>
       </section>
-      <section>
-        <article>
-          <header class="tweet">
-            <div>
-              <img src="https://pixabay.com/vectors/isaac-newton-portrait-vintage-3936704/"> Newton
-            </div>
-            <div>
-              @SirIssac
-            </div>
-          </header>
-          <p class="underline">
-            If I have seen further it is by standing on the shoulders of giants
-          </p>
-          <footer class="tweet">
-            <div>
-              10 days ago
-            </div>
-            <div class="icons">
-              <i class="fa-solid fa-flag icon" ></i> <i class="fa-sharp fa-regular fa-comment icon"></i> <i class="fa-solid fa-heart icon"></i>
-            </div>
-          </footer>
-        </article>
-      </section>
+      <section id="tweets-container"></section>
     </main>
   </body>
 </html>

@@ -77,3 +77,21 @@ p.underline {
   border-bottom: 2px solid black;
   resize: none;
 }
+
+.img-tweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.user-name {
+  padding-left: 5px;
+}
+
+.error {
+  color: red;
+}
+
+.hideerror {
+  display: none;
+}
