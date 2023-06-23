@@ -25,7 +25,6 @@ body {
   width: 90%;
   margin-right: 5%;
   margin-left: 5%;
-  border: solid 2px red;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -37,4 +36,28 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ 
+
+ /* This applies to desktop only with a minimum size of 1024px*/
+ @media (min-width: 1024px) {
+  #desktop {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 7%;
+  }
+
+  #headerProfile {
+   flex-basis: 30%;
+   margin-top: 0;
+   align-self: flex-start;
+   float: left;
+  }
+
+  .container {
+    margin-top: 1%;
+    flex-basis: 70%;
+    float: right;
+  }
+
+ }
  
