@@ -4,9 +4,9 @@ Tweeter is a simple, single-page web app.
 
 ## Final Product
 
-!["Desktop View"](docs/tweet1.png)
-!["Mobile view 1"](docs/tweet2.png)
-!["Mobile view 2"](docs/tweet3.png)
+!["Desktop View"](https://github.com/Tagellajore/tweeter/blob/33ddbe10266b6092e1736bbdb35f28b6d8500156/docs/tweet1.png)
+!["Mobile view 1"](https://github.com/Tagellajore/tweeter/blob/33ddbe10266b6092e1736bbdb35f28b6d8500156/docs/tweet2.png)
+!["Mobile view 2"](https://github.com/Tagellajore/tweeter/blob/33ddbe10266b6092e1736bbdb35f28b6d8500156/docs/tweet3.png)
 
 ## Dependencies
 * body-parser
