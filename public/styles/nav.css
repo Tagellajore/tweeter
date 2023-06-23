@@ -1,3 +1,4 @@
+/* style for the navigation bar*/
 nav {
   height: 120px;
   width: 100vw;
@@ -7,6 +8,7 @@ nav {
   padding-right: 1.5em;
 }
 
+/* font for nav */
 .bunge {
   font-family: Bungee;
 }

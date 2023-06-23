@@ -6,17 +6,12 @@
 
 $(document).ready(() => {
 
-  // grab the form
   const $form = $('#new-tweet-item');
 
-
-  // attach a function to run on submit
   $form.on('submit', (event) => {
   event.preventDefault();
   $(".error").addClass("hideerror");
   console.log(event);
-  
-  // $(".error").html("")
 
   let val = $('#tweet-text').val();
   console.log(val);
@@ -26,17 +21,14 @@ $(document).ready(() => {
     $("#errormessage").html("You need to type something first");
     console.log("val.length === 0");
     return
-    // return alert('You need to type something first')
   } else if (val === null) {
     $(".error").removeClass("hideerror");
     $("#errormessage").html("text area can not be null");
     return
-    // return alert('text area can not be null')
   } else if (val.length > 140) {
     $(".error").removeClass("hideerror");
     $("#errormessage").html("Characters length needs to be less than 140");
     return
-    // return alert('Characters length needs to be less than 140');
   }
 
   
@@ -54,15 +46,13 @@ $(document).ready(() => {
     console.log("tweet sent to server");
     loadtweets();
   })
-});
-
+  });
 
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-
 
   const createTweetElement = function(tweetData) {
     const time = timeago.format(tweetData.created_at);
@@ -99,8 +89,6 @@ $(document).ready(() => {
       $('#tweets-container').prepend($tweet);
     }
   }
-
-  // renderTweets(Data);
 
   const loadtweets = function() {
     $.ajax({

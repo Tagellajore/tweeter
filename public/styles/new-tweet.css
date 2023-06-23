@@ -20,16 +20,17 @@ section.new-tweet {
   resize: none;
 }
 
-#tweet-color {
+#tweet-button {
   background-color: #4056A1;
   font-family: Bungee;
   color: #FFFFFF;
 }
-
+ /* font for counter */
 .counter {
   font-family: Bungee;
 }
 
+/* style for counter when we type morethan 140 chxs */
 .counter-red {
   color: red;
 }
@@ -49,10 +50,12 @@ article {
   border: solid 2px black;
 }
 
+/* hover for the box */
 article:hover {
   box-shadow: 5px 5px #4056A1;
 }
 
+/* hovering effect on the icons */
 .icon:hover {
  color: yellow;
 }
@@ -77,7 +80,7 @@ p.underline {
   border-bottom: 2px solid black;
   resize: none;
 }
-
+ /* style for the header image*/
 .img-tweet {
   display: flex;
   flex-direction: row;
@@ -89,10 +92,12 @@ p.underline {
   padding-left: 5px;
 }
 
+/* color for the error display*/
 .error {
   color: red;
 }
 
+/* style for hidding error when it is not required */
 .hideerror {
   display: none;
 }
