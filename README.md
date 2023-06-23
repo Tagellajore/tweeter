@@ -4,6 +4,9 @@ Tweeter is a simple, single-page web app.
 
 ## Final Product
 
+!["Desktop View"](docs/tweet1.png)
+!["Mobile view 1"](docs/tweet2.png)
+!["Mobile view 2"](docs/tweet3.png)
 
 ## Dependencies
 * body-parser
