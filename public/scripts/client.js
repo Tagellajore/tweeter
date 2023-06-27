@@ -4,22 +4,22 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(() => {
+$(document).ready(() => { 
 
   const $form = $('#new-tweet-item');
 
+// Event handler for the tweet form submission
   $form.on('submit', (event) => {
   event.preventDefault();
   $(".error").addClass("hideerror");
-  console.log(event);
+
 
   let val = $('#tweet-text').val();
-  console.log(val);
+
   
   if(val.length === 0)  {
     $(".error").removeClass("hideerror");
     $("#errormessage").html("You need to type something first");
-    console.log("val.length === 0");
     return
   } else if (val === null) {
     $(".error").removeClass("hideerror");
@@ -35,9 +35,8 @@ $(document).ready(() => {
   console.log('form has been submitted')
   
   const urlEncodedString = $form.serialize();
-  console.log(urlEncodedString);
-  
-  
+
+  // Send a POST request to the server to save the tweet
   $.ajax({
     url: "http://localhost:8080/tweets",
     method: "POST",
@@ -48,12 +47,14 @@ $(document).ready(() => {
   })
   });
 
+  // Function to escape special characters in a string(js)
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // Function to create the HTML markup for a single tweet
   const createTweetElement = function(tweetData) {
     const time = timeago.format(tweetData.created_at);
   const $tweet = $(
@@ -83,13 +84,17 @@ $(document).ready(() => {
   return $tweet
   };
 
+  // Function to render the tweets on the page
   const renderTweets = function(tweets) {
+   $('#tweets-container').empty(); //  clear existing tweet
+
     for (const tweetObj of tweets) {
       const $tweet = createTweetElement(tweetObj);
       $('#tweets-container').prepend($tweet);
     }
   }
 
+  // Function to load tweets from the server 
   const loadtweets = function() {
     $.ajax({
       url: 'http://localhost:8080/tweets',
@@ -99,7 +104,7 @@ $(document).ready(() => {
     })
   };
 
-  loadtweets();
+  loadtweets(); // Initial loading of tweets
 
 });
 
