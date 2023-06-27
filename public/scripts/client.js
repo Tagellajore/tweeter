@@ -44,6 +44,9 @@ $(document).ready(() => {
   }).then(() => {
     console.log("tweet sent to server");
     loadtweets();
+
+    // clear the textarea
+    $('#tweet-text').val('');
   })
   });
 
